@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# FAKEFLIX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fakeflix: a Netflix clone
 
-## Available Scripts
+This application was initially made in class components and later converted into functional components with hooks to keep it future-ready. It was mainly used as a way to learn React and state management.
 
-In the project directory, you can run:
+The application implements authentiction using firebase and consists of a landing made to emulate the movie list and title/description display as seen in Netflix. The user will be able to slect a movie to view more information on it and, save it as their favourites. The API used to fetch movie information here is [TMDB](https://www.themoviedb.org/), and user specific information and authntication is stored in Firebase.
 
-### `npm start`
+# Running the Application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+use the `npm run start` command in the project directory to run the application. The application will be available on `http://localhost:3000/`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Project layout
+The file structure for this project is given below
+```
+fakeflix-react/
+├─ src/
+│  ├─ components/
+│  ├─ context/
+│  ├─ pages/
+│  ├─ firebase.js
+│  ├─ App.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ Requests.js
+├─ .env
+├─ .firebaserc
+├─ firebase.json
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ README.md
+├─ tailwind.config.js
+```
+A few key points on the above are:
+| Folder/File | Description |
+|-------------|-------------|
+|`components/`containsns all the components implemented in the reacapplicationon |
+|`context/`| contains the contexts used in the application along with their handlers |
+|`pages`| contains all the views for the corresponding routes defined in the application |
+|`firebase.js`| contains the firebase configuration setup fetched from `.env` |
+|`App.js`| entrypoint for the React application into the `index.html` file |
+|`Requests.js`| contians all the calls to the TMDB API to fetch movies to be displayed |
+|`.firebaserc/firebase.json`| configurations for firebase |
+|`postcss.config.js/tailwind.config.js`| configurations for tailwind |
