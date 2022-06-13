@@ -35,7 +35,7 @@ fakeflix-react/
 A few key points on the above are:
 | Folder/File | Description |
 |-------------|-------------|
-|`components/`containsns all the components implemented in the reacapplicationon |
+|`components/`| containsns all the components implemented in the reacapplicationon |
 |`context/`| contains the contexts used in the application along with their handlers |
 |`pages`| contains all the views for the corresponding routes defined in the application |
 |`firebase.js`| contains the firebase configuration setup fetched from `.env` |
